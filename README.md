@@ -4,8 +4,6 @@
 
 **Run klipper, moonraker, fluidd, KlipperScreen on android system, one-click script for quick configuration.**
 
-**The English version of the tutorial is here: [README_en.md](https://github.com/gaifeng8864/klipper-on-android/blob/main/README_en.md)**
-
 
 **视频教程在这里：**
 
