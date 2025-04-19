@@ -211,7 +211,7 @@ ssh登录进入debian系统后执行以下命令：
 
 
 
-	sudo apt install -y git vim wget
+	sudo apt install -y git wget
 	
 	sudo apt install usbutils libusb-1.0-0-dev  #usb依赖
  
