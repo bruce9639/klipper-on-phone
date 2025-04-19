@@ -26,7 +26,7 @@ B站：
 
 ***(https://gist.github.com/CODERUS/a5ec4a456f5b58186cbebb66a8542a2e)***
 
-***t原教程来自 @gaifeng8864***
+***原教程来自 @gaifeng8864***
 
 ***([(https://github.com/gaifeng8864/klipper-on-android)](https://github.com/gaifeng8864/klipper-on-android))***
 
@@ -43,25 +43,13 @@ B站：
 
 2.本教程示例软硬件环境：
 
-  小米2S手机（官方代号 aries ）
-  
-  16G机身存储，2G运行内存
-		
-  运行基于android9的魔趣9.0操作系统
-		
-  系统已使用魔趣官方补丁获取root权限
-		
-  刷机及系统root参考官方教程：
-		
-  ROM下载与刷机：https://download.mokeedev.com/aries.html
-		
-  获取root权限：https://bbs.mokeedev.com/t/topic/6577
+  手机系统必须获取root权限
 		
 3.理论上，只要能root的安卓手机此教程都能适用，待测试。	
 	  
 4.理论上，在termux里安装proot容器后安装的debian系统也可以使用，待测试。
 
-5.打印机控制主板型号：MKS SGEN-L V1.0 ，主板内SD卡中已烧录klipper固件。
+5.下位机已提前烧录klipper固件。
 	  
 	  
 **本教程特点:**
@@ -106,11 +94,7 @@ termux_118.apk（选装，需要时再安装）下载链接：https://github.com
 		
 电脑端：
 
-Xshell（必装）官网地址：https://www.netsarang.com/en/xshell/
-
-Xftp（选装，建议安装）：https://www.netsarang.com/en/xftp/
-
-
+ssh软件有很多，选一个自己喜欢的
 
 
 ## 0.安装XServer-XSDL ##
@@ -230,17 +214,41 @@ ssh登录进入debian系统后执行以下命令：
 	sudo apt install -y git vim wget
 	
 	sudo apt install usbutils libusb-1.0-0-dev  #usb依赖
+ 
+ #修改root密码	
 	
-	sudo passwd #修改root密码
-	
-	su root   #切换root用户 
-	
-	adduser klipper #新建klipper用户并设置密码
-	
-	su klipper输入密码进入klipper用户
-	
+        sudo passwd
 
+ #切换root用户 	
+	
+         su root 
 
+#新建klipper用户并设置密码##
+	
+        adduser klipper 
+
+ #如果出现出现“不在sudoers文件中，此事将被报告”的问题先切换至root用户#
+         
+	 su root
+
+#设置 /etc/sudoers 文件权限，添加 可写权限,输入修改权限命令
+
+      chmod u+w /etc/sudoers
+
+#执行nano命令，编辑/etc/sudoers文件
+      
+      nano /etc/sudoers
+
+#找到root ALL=(ALL) ALL 的下一行添加代码：
+ 
+     klipper ALL=(ALL) ALL     
+
+#ctrl+x保存退出    
+
+#进入klipper用户	#
+	
+         su klipper
+	
 ## 5.使用kiauh安装klipper ##
 
 	cd ~
