@@ -5,16 +5,11 @@
 **Run klipper, moonraker, fluidd, KlipperScreen on android system, one-click script for quick configuration.**
 
 
-**视频教程在这里：**
+**感谢以下教程：**
 
 B站：
 
 [【保姆级教程】告别树莓派，安卓klipper全新安装方案+一键配置脚本，只需一点，从此告别安卓手机只能换脸盆的命运](https://www.bilibili.com/video/BV1BG4y1t7RR/?vd_source=7fb5d23ecaaec9c060d89fdde67b3d1b)
-
-YOUTUBE：
-
-[【教程】告别树莓派，安卓klipper全新安装方案+一键配置脚本](https://youtu.be/s1tdqg6ke4w)
-
 
 
 
@@ -31,7 +26,9 @@ YOUTUBE：
 
 ***(https://gist.github.com/CODERUS/a5ec4a456f5b58186cbebb66a8542a2e)***
 
+***t原教程来自 @gaifeng8864***
 
+***([(https://github.com/gaifeng8864/klipper-on-android)](https://github.com/gaifeng8864/klipper-on-android))***
 
 
 **前言：**
