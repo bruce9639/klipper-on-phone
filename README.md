@@ -218,35 +218,35 @@ ssh登录进入debian系统后执行以下命令：
 
  #如果出现出现“不在sudoers文件中，此事将被报告”的问题先切换至root用户#
          
-	 su root
+    su root
 
 #设置 /etc/sudoers 文件权限，添加 可写权限,输入修改权限命令
 
-      chmod u+w /etc/sudoers
+    chmod u+w /etc/sudoers
 
 #执行nano命令，编辑/etc/sudoers文件
       
-      nano /etc/sudoers
+    nano /etc/sudoers
 
 #找到root ALL=(ALL) ALL 的下一行添加代码：
  
-     klipper ALL=(ALL) ALL     
+    klipper ALL=(ALL:ALL) ALL     
 
 #ctrl+x保存退出    
 
 #进入klipper用户	#
 	
-         su klipper
+    su klipper
 	
 ## 5.使用kiauh安装klipper ##
 
-	cd ~
+    cd ~
 
 ###进入登录用户家目录
 
 
 
-	git clone https://gitee.com/miroky/kiauh.git
+    git clone https://gitee.com/miroky/kiauh.git
 
 ###国内kiauh脚本地址（与上面官方地址二选一即可）
 
